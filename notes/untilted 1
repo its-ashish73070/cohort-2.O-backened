@@ -1,0 +1,34 @@
+CLUSTER = combination of storage and processor 
+
+hmne cluster create kiya mumbai wale data base server pe , us cluster ka size tha 512 mb aur us cluster se hmne connect kiya  with the help of mongodb compass 
+ek cluster ke andr bhut sare database ho skte hai  
+jo hamara cloud hai by the cloud hmare pas bhut sare clouds  hai like Google cloud , AWS , Azure 
+but hm yaha pr co cloud use krenge uska nam hai =  Mongodb Atlas 
+ Mongodb Atlas ek company hai jinhone bhut sare database ke  servers create kiye hai  aur ise world ke alg alg locations pr place kr diya 
+ server = ye ek machine  hai jise program kiya jata hai ki jo bhi request aa rhi hai usko shi trike se fulfil kr diya jaye 
+ types of server , hm jo type ka server create kr rhe hai jaha pe user ki request ko suna jata hai aur age bdha jata hai 
+ |_ hmare sbse phle ate hai web server jo hm create kr rhe hai hosting websites ke liye express ki help se website ke liye 
+ |_ ek hamare ate hai data base servers  jo hm database pdh rhe h ye bhi ek type ke server hote hai 
+ |_ ek ata hai file server , jo file ko store krne ke kam ata hai 
+ |_ ek ata hai email server , jo email ko send aur recieve krne ke kam ata hai 
+
+ Mongo db atas ek platform hai jaha pr hm hm apne database ko manage kr skte hai and cluster ko manage kr skte hai 
+ Atlas admin mtlb wo kuch bhi kr skta hai hamare database me 
+ Read and write to any database me hm keval read and write kr skre hai aur kuch bhi nh kr skte hai  
+
+
+ jo hamare pas uri link hota hai iska main kam hota hai ki jo hamara compass hai usko mongodb jo hamara database server  tha 
+
+
+
+ fnf 
+ jo hamara cluster hai ek cluster ke andr bhut sare database ho skte hai lekin hm lenge ek hi database jo hm data lete hai wo store hota hao database ke andr aur jo hamara database hota hai wo create hota hai clusters ke andr , yani clusters bhut sare databse create kr skta hai 
+
+
+
+ ab hm yaha pe ek express ka server create krenge , fir server ko connect krenge hmare database se 
+
+
+
+// creating folder and opening in new page with the help of terminal 
+ mkdir day-6 && code day-6 -r

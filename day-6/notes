@@ -1,0 +1,9 @@
+ab hm basic smjhenge ki server ko create krenge aur usko database se connect kaise krte hai hm wo smjhenge 
+
+server ko initiate krne ke liye hamare pas command hoti hai 
+                                                           npm init -y
+ab hme ek package install krna hoga jiska nam hai express                                                           
+                                                           npm i express
+
+ab hm ek folder create krenge src and iss folder ke andr ek file create krenge app.js                                                           
+app.js ke mainly do hi kam hota hai ek server create krna , aur dusra kam hota hai server config krna 
