@@ -52,3 +52,10 @@ dhyan rkhna agr hm iss line ko nh likh rhe hai  aur hm koi bhi variable create k
 ab access krne ke liye hme mongoose.connect ke andr ye line likhna pdega --> (process.env.MONGO_URI)-->process.env. ke bad hm variable ka nam likhte hai jis variable ko hm access krna chahte hai 
 
 ab hm dekhe to sayad se ye .env wali file hamare github pr jayegi to uske liye hm ek file aur create krte hai aur file ka nam hota hai .gitignaore aur is file ke andr hm likhte hai .env , ab jo .env file hai ye hamare github pr move nh hoegi 
+
+
+ab jb hm get method se data mangate hai to notes array of object ke format me ata hai jisme hr ek object ek notes ko represent krti hai jisme id, title aur description hota hai
+
+to jo hmari find method hoti hai ye sare notes ke data ko database se find kregi , jitne bhi noites honge un sbhi ke data ko pdhegi fir return kregi aur ye array of object ke format me data ko return krti hai 
+dhyan rkhna find method hmesa array me hi data return kregi wo bhi object ke format me 
+

@@ -39,6 +39,21 @@ app.post("/notes",async (req,res)=>{
 
 
 
+
+/* ab hm ek api aur create krenge , jo hamari api hogi uski method GET hone wali haiaur jo api nam rhega wo slash notes rhega , ye api sare notes ke data ko fetch kregi, ab krna ye hai ki jb bhi GET method ki slash notes api pe request jayegi tb hme waha pr jitne bhi notes hmare database me create hue hai un notes ke data ko hme padhna hai aur use reponse pe send krna hai  */
+app.get("/notes",async (req,res)=>{
+    const notes = await noteModel.find()/* hme krna ye hai ki jitne bhi notes ka data hai jo hmne database me save kiya hoga un sbhi data ko yaha pe fetch krna hai , to use krne ke liye hme noteModel ka use krna pdega aur hmare pas ek method hota hai find aur ye find method krta ye hai ki database me jitne bhi notes rhenge un sbhi ke data ko read kregi aur read krne ke bad wo return kr deti hai aur ise hm save krenge notes constant ke andr await lagakar aur agr await use kr rhe hai to upr async lagana pdega aur hm response.status use kr rhe hote hai with status code 200 aur json format me hm data bhejenge message aur hmara message ye rhega ki Notes fetched successfully and jo hmara notes ka data hai use as it is share kr denge , ab hm postman pr ate hai aur ek nai request denge get method se to send krne se hmare sare data dikhne lg jayenge */
+    /* ye jo hmari find method hoti hai ye database me jitne bhi notes rhenge un sbhi ke data ko ye read krti hai, return krti h aur jo wo return kr rhi hai use hm save kr dete hai notes variable ke andr aur notes ke andr hm use response me send kr dete hai */
+    /* lgbhg hm bol skte hai ki noteModel ke sath hm jitne bhi method use krne wale hai un sbhi method me hme await use krna hi pdega  */
+res.status(200).json({
+    message:"Notes fetched successfully",
+    notes
+})
+
+})
+
+
+
 /* ab jo hmne server create kiya hai ise krenge hm export */
 module.exports = app
 
