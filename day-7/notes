@@ -1,0 +1,54 @@
+http://localhost:3000-->ye uri h local host wali jo hamre server pr tha 
+: column se phle wali chij batati h ki protocol kon sa use kiya ja rha hai 
+
+
+mongodb+srv://Ashish:%3Cdb_password%3E@db.netcluster0.vy93sua.mongo/day-7
+
+similar way se isme bhi column ke phle ek protocol h jo mongodb ne khud banaya hai , ye bas ye batayega ki communication is protocol se kiya jayega
+// iske bad bataya jata hai ki hm kis user ke credential se connect kr rhe hai and uske bad uska password likhte hai 
+jo hm cluster se create kr rhe honge wo ashish username ke password ke sath connect kr rhe honge cluster ka nam and uski id @ ke bad de rkhi hai
+db.netcluster0.vy93sua.mongo --> ye itna batata hai ki hamara cluster  kon se database server se connected hai
+/iss day-7 ka mtlb jo hmne mumbai ke andr cluster create kiya hai uss cluster ke andr jis database ka nam day-7 hai uss database se connect ho jao 
+
+
+
+
+
+
+ab code aur kam dhang se kaise krte hai ya production level pr kaise likhte hai use dekhenge
+server.js file ka jo kam rhta hai database ko connect krna , lekin code hm jo likhenge jo exactly database ko connect kr rha hai, hmara server jis code se database se connect hota hai wo hm server.js file me nh likhte hai , kyuki server.js file me already bad me bhut sara code ane wala hai , to ye jo database se exactly kaise connect kiya ja rha hai ye code server.js file me nh jata hai
+ise hm src folder ke andr ek aur folder banate hai jiska nam hota hai config and config folder ke andr ek aur file bnti hai database.js nam se aur iske andr ye (jo database se exactly kaise connect kiya ja rha hai ye code ) code jata hai 
+
+
+
+
+
+
+
+
+
+
+ab tk hmne kya pdha 
+SCHEMA-->schema ka mtlb hota hai database ko batana ki hm kis format me data ko store krne wale hai ye hota hai schema 
+MODEL--->model ka mtlb hota hai ki age hme database me kuch bhi crud operation perform krna hai to hme model ki zrurt pdegi 
+
+ab jb hm ek model create kr rhe the to hmne schema me bataya ko hm apne notes ke andr do property store krunga aur wo do property hongi title aur description aur dono ka type rhega string , lekin jb hmne server ka code likha aur hm ek kam krte hai user/client apni side se ek aur property bhej rha hai , property ka nam hai age aur uska type hai integer aur uss age ki value hai 23 , ab hmne api ke andr age destructure bhi kr liya aur note variable ke andr bhi age de diya lekin abhi tk hmne schema ke andr nhi bola ki tisri property hamari age rhegi jiska type integer hoga , ab hm dusra notes post/create krenge to title aur description to aya rhega compass ke andr but age nh ayega bcz hmne ise schema ke andr nh likha tha , schema me hmne bs itna bola hai ki keval title aur description rhega , to jin properties ko hm schema me nh likh rhe hote hai un properties ko database ignore kr deta hai 
+
+
+
+
+
+
+
+
+to abhi tk hmne dekha ki hm ek api ka use kr rhe hai aur iss api ka use krte hue hm ek note ko create kr skte hai aur note ka data hmare mongodb cluster me hota hai , jo cluster hmne mumbai me bana ke rkha tha aur jo hamare database ka nam tha day-7 usme hamari sari chije store hoti hai to uske liye hm connect krte hai with the help of uri ,  iss uri ke through hm apne database ko connect krte hai 
+
+but the problem is that ye jo hamare pas uri hai agr ye kisi ke pas chli gyi to wo bhi mere database se connect kr skta hai problem ye hai  , isiliye hm iss uri ko kbhi bhi public nh krte hai 
+ab jo hmara sara code hai wo to github pr dala hua hai joki public hai but hm iss uri ko public nh kr skte hai 
+to hm isliye ek file create krte hai , file ka nam hota hai .env aur yr file hm src folder ke andr create krte hai aur .env file ke andr ek variable create hota hai MONGO_URI aur iske andr hm value de dete hai apne uri ki... aur ab krna ye hai ki jo hmne variable create ki hai iski value hme use krni hai database.js file me aur use krne ke liye hme ek package ki zrurt pdti hai jiska nam hota hai dotenv(terminal me ye cmd run kro pckg install krne ke liye --> npm i dotenv)
+aur package install krne ke bad jo hamari server.js file hai isme sbse pehli line hm likhenge 
+require("dotenv").config()  --> .config ke bad ise kr rhe hai hm call
+dhyan rkhna agr hm iss line ko nh likh rhe hai  aur hm koi bhi variable create kr rhe hai .env file me us variable ko hm hamre server me access nh kr payenge , ye undefined undefined ata rhega
+ab access krne ke liye hme mongoose.connect ke andr ye line likhna pdega --> (process.env.MONGO_URI)-->process.env. ke bad hm variable ka nam likhte hai jis variable ko hm access krna chahte hai 
+
+ab hm dekhe to sayad se ye .env wali file hamare github pr jayegi to uske liye hm ek file aur create krte hai aur file ka nam hota hai .gitignaore aur is file ke andr hm likhte hai .env , ab jo .env file hai ye hamare github pr move nh hoegi 
