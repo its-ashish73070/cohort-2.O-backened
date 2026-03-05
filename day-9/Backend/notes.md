@@ -79,7 +79,7 @@ http://localhost:3000/api/notes/69a6db0dff7cc6226dfd2c4c
 aur jis notes ko hm update krna chahte hai hm usi notes ki id dalenge aur hm uske bad body ke andr raw ke andr ayenge aur format select krenge json aur notes me jo hme update krna hoga use hm likh denge aur itna krne ke bad hm request send kr denge to aise hamara notes update ho jayega 
 aur agr hme description ki jgh title update krna hoga to hm request.body me hm title bhej denge
 
-to aise krke abtk hmne char api create kr li hai 
+to aise krke abtk hmne char api create kr li hai , aur ab hamara backened complete ho chuka hai , ab hm iske bad hm iska frontened start krenge 
 
 
 
